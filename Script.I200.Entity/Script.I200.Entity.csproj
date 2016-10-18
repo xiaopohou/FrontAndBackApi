@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F66790E0-EFF6-4D5C-89AE-056E97861C07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Script.I200.Entity</RootNamespace>
+    <AssemblyName>Script.I200.Entity</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Script.I200.FrameWork">
+      <HintPath>..\Library\i200\Script.I200.FrameWork.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountVersionEnum.cs" />
+    <Compile Include="Api\Accountbook\AccountBalanceResponse.cs" />
+    <Compile Include="Api\Accountbook\AccountbookJournalSearchParam.cs" />
+    <Compile Include="Api\Accountbook\AccountbookJournalSearchResultItem.cs" />
+    <Compile Include="Api\Accountbook\AccountCreditCardResponse.cs" />
+    <Compile Include="Api\Accountbook\BillingJournalSearchParam.cs" />
+    <Compile Include="Api\Accountbook\BillingJournalSearchResult.cs" />
+    <Compile Include="Api\Accountbook\BillingJournalSearchResultItem.cs" />
+    <Compile Include="Api\Accountbook\BillingPaymentResponse.cs" />
+    <Compile Include="Api\Account\AccountBaseInfo.cs" />
+    <Compile Include="Api\Account\AccountOverview.cs" />
+    <Compile Include="Api\Account\AccountOverviewDetail.cs" />
+    <Compile Include="Api\Account\AccountVersion.cs" />
+    <Compile Include="Api\Coupon\CouponInfoItem.cs" />
+    <Compile Include="Api\Coupon\UserCouponModel.cs" />
+    <Compile Include="Api\Modules\AccountUserModule.cs" />
+    <Compile Include="Api\Modules\Module.cs" />
+    <Compile Include="Api\Mood\MoodRequestParams.cs" />
+    <Compile Include="Api\OnlineMall\ReceiveingAddressAdd.cs" />
+    <Compile Include="Api\Settings\SystemSmsTempaltes.cs" />
+    <Compile Include="Api\Tips\Tip.cs" />
+    <Compile Include="Api\UserStoreMoneyCard\UserStoreCardSearchParam.cs" />
+    <Compile Include="Api\UserStoreMoneyCard\UserStoreMoneyAdd.cs" />
+    <Compile Include="Api\UserStoreMoneyCard\UserStoreMoneySearchParam.cs" />
+    <Compile Include="Api\UserStoreMoneyCard\UserStoreMoneySearchResult.cs" />
+    <Compile Include="Api\UserStoreMoneyCard\UserStoreMoneySearchResultItem.cs" />
+    <Compile Include="Api\UserStoreMoneyCard\UserStoreTransactionRecordResult.cs" />
+    <Compile Include="Api\UserStoreMoneyCard\UserStoreTransactionRecordResultItem.cs" />
+    <Compile Include="Api\Users\BirthdayUsersResult.cs" />
+    <Compile Include="Api\Coupon\GetAllActiveCoupon.cs" />
+    <Compile Include="Api\Users\UserCouponBind.cs" />
+    <Compile Include="Api\Users\UserDetail.cs" />
+    <Compile Include="Api\Users\UserIntegral.cs" />
+    <Compile Include="Api\Users\UserIntegralDetail.cs" />
+    <Compile Include="Api\Users\UserListDetails.cs" />
+    <Compile Include="Api\Users\UserListOtherSumData.cs" />
+    <Compile Include="Api\Users\UserListSearch.cs" />
+    <Compile Include="Api\Users\UserListSearchResult.cs" />
+    <Compile Include="Api\Users\UserMessage.cs" />
+    <Compile Include="Api\Users\UserSale.cs" />
+    <Compile Include="Api\Users\UserStatistics.cs" />
+    <Compile Include="Api\Users\UserTagAdd.cs" />
+    <Compile Include="Api\Users\UserTagBind.cs" />
+    <Compile Include="Api\Users\UserTagsGet.cs" />
+    <Compile Include="Api\UserTimesCard\AccountTimeCardsSearchParam.cs" />
+    <Compile Include="Api\UserTimesCard\AccountTimesCardAdd.cs" />
+    <Compile Include="Api\UserTimesCard\AccountTimesCardSearchParamResult.cs" />
+    <Compile Include="Api\UserTimesCard\AccountTimesCardSearchParamResultItem.cs" />
+    <Compile Include="Api\UserTimesCard\UserTimesCardAdd.cs" />
+    <Compile Include="Api\UserTimesCard\UserTimesCardItem.cs" />
+    <Compile Include="Api\UserTimesCard\UserTimesCardSearchParam.cs" />
+    <Compile Include="Api\UserTimesCard\UserTimesCardSearchParamResult.cs" />
+    <Compile Include="Api\UserTimesCard\UserTimesCardSearchParamResultItem.cs" />
+    <Compile Include="Api\UserTimesCard\UserTimesCardTransactionRecordResult.cs" />
+    <Compile Include="Api\UserTimesCard\UserTimesCardTransactionRecordResultItem.cs" />
+    <Compile Include="Api\UserTimesCard\UserTimesCardTransactionRecordSearchParam.cs" />
+    <Compile Include="Dto\Accountbook\C_AccountBook.cs" />
+    <Compile Include="Dto\Accountbook\C_AccountCreditCardShowDto.cs" />
+    <Compile Include="Dto\Accountbook\C_AccountWithdrawalsShowDto.cs" />
+    <Compile Include="Dto\Accountbook\C_Account_AccountBook_Log_Record.cs" />
+    <Compile Include="Dto\Accountbook\C_BillingBusinessShowDto.cs" />
+    <Compile Include="Dto\Accountbook\C_BillingBusinessShowHaveTotalMoneyDto.cs" />
+    <Compile Include="Dto\Accountbook\C_BillingThirdPartyPaymentDto.cs" />
+    <Compile Include="Dto\Accountbook\C_Billing_JournalOutBase.cs" />
+    <Compile Include="Dto\Accountbook\C_SearchParams.cs" />
+    <Compile Include="Api\Accountbook\NewWithdrawingJournalRequest.cs" />
+    <Compile Include="Api\Accountbook\PageDataView.cs" />
+    <Compile Include="Api\Accountbook\WithdrawingStatusAndBillingStatus.cs" />
+    <Compile Include="Api\BasicData\Address.cs" />
+    <Compile Include="Api\Expenses\ExpensesSearchResult.cs" />
+    <Compile Include="Api\Expenses\ExpensesSearchResultItem.cs" />
+    <Compile Include="Api\Expenses\ExpensesSearchParam.cs" />
+    <Compile Include="Api\Expenses\PayClassResult.cs" />
+    <Compile Include="Api\PaginationParamBase.cs" />
+    <Compile Include="Api\PaginationResultBase.cs" />
+    <Compile Include="Api\Accountbook\WithdrawingJournalSearchParam.cs" />
+    <Compile Include="Api\Accountbook\WithdrawingJournalSearchResult.cs" />
+    <Compile Include="Api\Accountbook\WithdrawingJournalSearchResultItem.cs" />
+    <Compile Include="Api\RequestModel.cs" />
+    <Compile Include="Api\ResponseModel.cs" />
+    <Compile Include="Api\Shared\SendCaptcha.cs" />
+    <Compile Include="Api\Shared\UploadCalculationInfo.cs" />
+    <Compile Include="Api\Shared\VerficationCodeRequestParams.cs" />
+    <Compile Include="Api\UserContext.cs" />
+    <Compile Include="Api\Accountbook\WithdrawingAccountRequest.cs" />
+    <Compile Include="Api\Accountbook\WithdrawingAccountListItem.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Dto\Accountbook\AccountbookRequest.cs" />
+    <Compile Include="Dto\Accountbook\AccountCreditCardDto.cs" />
+    <Compile Include="Dto\Accountbook\AccountWithdrawalsDto.cs" />
+    <Compile Include="Dto\Accountbook\ResponseDTO.cs" />
+    <Compile Include="Dto\Accountbook\WithdrawOtherData.cs" />
+    <Compile Include="Api\Advert\Advert.cs" />
+    <Compile Include="Api\Advert\AdvertResources.cs" />
+    <Compile Include="Dto\Captcha\CaptchaHelperModel.cs" />
+    <Compile Include="Dto\OnlineMall\IndexMaterialGoods.cs" />
+    <Compile Include="Dto\OnlineMall\MaterialGoodsInfo.cs" />
+    <Compile Include="Dto\OnlineMall\MaterialGoodsListRedisItem.cs" />
+    <Compile Include="Dto\OrderCoupon\CheckIsHasCoupon.cs" />
+    <Compile Include="Dto\OrderCoupon\MaterialCouponInfo.cs" />
+    <Compile Include="Dto\Sales\SalesRecord.cs" />
+    <Compile Include="Dto\Sales\SalesRepaymentDto.cs" />
+    <Compile Include="Dto\Sales\SalesReturnGoodDto.cs" />
+    <Compile Include="Dto\User\UserIntegral.cs" />
+    <Compile Include="Dto\User\UserParamDto.cs" />
+    <Compile Include="Enum\AccountSmsTeampltesEnum.cs" />
+    <Compile Include="Enum\AccountUserGradeConsts.cs" />
+    <Compile Include="Enum\AccountUserPowerEnum.cs" />
+    <Compile Include="Enum\BetaAdvanceEnum.cs" />
+    <Compile Include="Enum\BillingBusinessTypeEnum.cs" />
+    <Compile Include="Enum\CouponEnum.cs" />
+    <Compile Include="Enum\DateSpanEnum.cs" />
+    <Compile Include="Enum\FeedbackTypeEnum.cs" />
+    <Compile Include="Enum\GetMaterialIdEnum.cs" />
+    <Compile Include="Enum\ExportEnum.cs" />
+    <Compile Include="Enum\MaterialGoodsPicTypeEnum.cs" />
+    <Compile Include="Enum\MaterialGoodsStatusEnum.cs" />
+    <Compile Include="Enum\OnlineMallEnum.cs" />
+    <Compile Include="Enum\OnlineMallGoodsTypeEnum.cs" />
+    <Compile Include="Enum\OrderCouponEnum.cs" />
+    <Compile Include="Enum\SalesReturnGoodsTypeEnum.cs" />
+    <Compile Include="Enum\SmsEnum.cs" />
+    <Compile Include="Enum\StoreMoneyOperateEnum.cs" />
+    <Compile Include="Enum\UserBehaviorEventTypeEnum.cs" />
+    <Compile Include="Enum\UserBehaviorNameEnum.cs" />
+    <Compile Include="Enum\UserIntegralEnum.cs" />
+    <Compile Include="Enum\UserLogItemTypeEnum.cs" />
+    <Compile Include="Enum\UserLogTypeEnum.cs" />
+    <Compile Include="Enum\PayTypeEnum.cs" />
+    <Compile Include="Enum\PowerEnum.cs" />
+    <Compile Include="Model\Account\AccountExpand.cs" />
+    <Compile Include="Model\Account\AccountLogo.cs" />
+    <Compile Include="Model\Account\AccountVersionBasic.cs" />
+    <Compile Include="Model\Account\Business.cs" />
+    <Compile Include="Model\Advert\Advert.cs" />
+    <Compile Include="Model\Advert\AdvertResources.cs" />
+    <Compile Include="Model\Advert\AdvertLog.cs" />
+    <Compile Include="Model\BaseData\AddressBase.cs" />
+    <Compile Include="Model\Coupon\CouponInfo.cs" />
+    <Compile Include="Model\Coupon\CouponList.cs" />
+    <Compile Include="Model\Expenses\PayClass.cs" />
+    <Compile Include="Model\Expenses\PayRecord.cs" />
+    <Compile Include="Api\Feedback\FeedbackRequestParams.cs" />
+    <Compile Include="Model\Feedback\SysAccount.cs" />
+    <Compile Include="Model\Feedback\SysTaskDaily.cs" />
+    <Compile Include="Model\Goods\GoodsInfo.cs" />
+    <Compile Include="Model\Goods\GoodsInfoEx.cs" />
+    <Compile Include="Model\Goods\GoodsLogInfo.cs" />
+    <Compile Include="Model\Log\LogInfo.cs" />
+    <Compile Include="Model\Modules\AccountUserModule.cs" />
+    <Compile Include="Model\Modules\Module.cs" />
+    <Compile Include="Model\Mood\LogSign.cs" />
+    <Compile Include="Model\Mood\MoodInfo.cs" />
+    <Compile Include="Model\Onlinemall\Evaluation.cs" />
+    <Compile Include="Model\Onlinemall\MaterialGoods.cs" />
+    <Compile Include="Model\Onlinemall\MaterialGoodsPic.cs" />
+    <Compile Include="Model\Onlinemall\ReceiveingAddress.cs" />
+    <Compile Include="Model\Order\OrderCoupon.cs" />
+    <Compile Include="Model\Sales\SaleLogInfo.cs" />
+    <Compile Include="Model\Sales\SalesInfo.cs" />
+    <Compile Include="Model\Sales\SalesList.cs" />
+    <Compile Include="Model\Settings\SmsTemplates.cs" />
+    <Compile Include="Model\TimesCard\AccountTimesCard.cs" />
+    <Compile Include="Model\TimesCard\AccStoreTimesCard.cs" />
+    <Compile Include="Model\TimesCard\UserStoreTimes.cs" />
+    <Compile Include="Model\Tips\UserBehaviorModel.cs" />
+    <Compile Include="Model\User\UserGroup.cs" />
+    <Compile Include="Model\User\UserIntegral.cs" />
+    <Compile Include="Model\User\UserLogInfo.cs" />
+    <Compile Include="Model\UserStoreCard\UserStoreCards.cs" />
+    <Compile Include="Model\Account\Account.cs" />
+    <Compile Include="Model\User\AccountUser.cs" />
+    <Compile Include="Model\User\ApiToken.cs" />
+    <Compile Include="Model\User\BaseToken.cs" />
+    <Compile Include="Model\User\UserInfoDetail.cs" />
+    <Compile Include="Model\User\UserAdd.cs" />
+    <Compile Include="Model\User\UserBirthday.cs" />
+    <Compile Include="Dto\User\UserLog.cs" />
+    <Compile Include="Model\User\UserNick.cs" />
+    <Compile Include="Model\User\UserPhoneEmail.cs" />
+    <Compile Include="Dto\Common\YouPaiSDK.cs" />
+    <Compile Include="Enum\BankPlatBusinessEnum.cs" />
+    <Compile Include="Enum\BillingJournalStatus.cs" />
+    <Compile Include="Enum\CaptchaEnum.cs" />
+    <Compile Include="Enum\CaptchaPhoneEmailEnum.cs" />
+    <Compile Include="Enum\CaptchaTypeEnum.cs" />
+    <Compile Include="Enum\ResponseErrorcode.cs" />
+    <Compile Include="Model\Logging\Log.cs" />
+    <Compile Include="Model\Logging\RequestLog.cs" />
+    <Compile Include="Dto\Settings\LoggerSettings.cs" />
+    <Compile Include="Enum\ErrorCodeEnum.cs" />
+    <Compile Include="Enum\LogLevel.cs" />
+    <Compile Include="Enum\PaymentTypeEnum.cs" />
+    <Compile Include="Model\User\UserRank.cs" />
+    <Compile Include="Model\User\UserSms.cs" />
+    <Compile Include="Model\User\UserTagInfo.cs" />
+    <Compile Include="Model\User\UserTagKey.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RedisConsts.cs" />
+    <Compile Include="SqlConsts.cs" />
+    <Compile Include="StatusDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Script.I200.Data\Script.I200.Data.csproj">
+      <Project>{650f3f34-e1ad-407b-9506-cdfb03ebff35}</Project>
+      <Name>Script.I200.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dto\Account\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

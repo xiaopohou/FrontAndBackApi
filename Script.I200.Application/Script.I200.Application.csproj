@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{040C90EB-7841-4E8C-8FD9-9F071B7CF232}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Script.I200.Application</RootNamespace>
+    <AssemblyName>Script.I200.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=5.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Dapper, Version=1.40.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.42\lib\net45\Dapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Elasticsearch.Net, Version=2.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\Elasticsearch.Net.2.4.5\lib\net45\Elasticsearch.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="I200.ElasticSearch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SearchSDK.1.0.0\lib\I200.ElasticSearch.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MicroOrm.Dapper.Repositories, Version=1.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicroOrm.Dapper.Repositories.1.3.3\lib\net45\MicroOrm.Dapper.Repositories.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Nest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=96c599bbe3e70f5d, processorArchitecture=MSIL">
+      <HintPath>..\packages\NEST.2.4.5\lib\net45\Nest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.5\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Script.I200.Config, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Library\i200\Script.I200.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="Script.I200.Controls">
+      <HintPath>..\Library\i200\Script.I200.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Script.I200.DALProfile">
+      <HintPath>..\Library\i200\Script.I200.DALProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="Script.I200.DbI200">
+      <HintPath>..\Library\i200\Script.I200.DbI200.dll</HintPath>
+    </Reference>
+    <Reference Include="Script.I200.FrameWork">
+      <HintPath>..\Library\i200\Script.I200.FrameWork.dll</HintPath>
+    </Reference>
+    <Reference Include="Script.I200.Model">
+      <HintPath>..\Library\i200\Script.I200.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accountbook\AccountbookService.cs" />
+    <Compile Include="Accountbook\BankPlatControl.cs" />
+    <Compile Include="Account\AccountService.cs" />
+    <Compile Include="Account\IAccountService.cs" />
+    <Compile Include="Advert\AdvertService.cs" />
+    <Compile Include="Advert\IAdvertService.cs" />
+    <Compile Include="AuthCode\AuthCodeService.cs" />
+    <Compile Include="AuthCode\MockAuthCodeService.cs" />
+    <Compile Include="BasicData\BasicDataService.cs" />
+    <Compile Include="Accountbook\IAccountbookService.cs" />
+    <Compile Include="AuthCode\IAuthCodeService.cs" />
+    <Compile Include="BasicData\IBasicDataService.cs" />
+    <Compile Include="Expenses\ExpensesService.cs" />
+    <Compile Include="Expenses\IExpensesService.cs" />
+    <Compile Include="Feedback\FeedbackService.cs" />
+    <Compile Include="Feedback\IFeedbackService.cs" />
+    <Compile Include="Goods\GoodsService.cs" />
+    <Compile Include="Goods\IGoodsService.cs" />
+    <Compile Include="Logging\DefaultLogger.cs" />
+    <Compile Include="Logging\ILogger.cs" />
+    <Compile Include="Logging\LoggingExtensions.cs" />
+    <Compile Include="Logging\NLogger.cs" />
+    <Compile Include="Modules\IModuleService.cs" />
+    <Compile Include="Modules\ModuleService.cs" />
+    <Compile Include="Mood\IMoodService.cs" />
+    <Compile Include="Mood\MoodService.cs" />
+    <Compile Include="OnlineMall\IOnlineMallService.cs" />
+    <Compile Include="OnlineMall\IOrderCouponService.cs" />
+    <Compile Include="OnlineMall\OnlineMallService.cs" />
+    <Compile Include="OnlineMall\OrderCouponService.cs" />
+    <Compile Include="Sales\ISalesService.cs" />
+    <Compile Include="Sales\SalesService.cs" />
+    <Compile Include="Settings\ISettingsService.cs" />
+    <Compile Include="Settings\SettingsService.cs" />
+    <Compile Include="Shared\ISharedService.cs" />
+    <Compile Include="Shared\MockSharedService.cs" />
+    <Compile Include="Share\IShareService.cs" />
+    <Compile Include="Share\ShareService.cs" />
+    <Compile Include="Tips\ITipsService.cs" />
+    <Compile Include="Tips\TipsService.cs" />
+    <Compile Include="UserCoupon\IUserCouponService.cs" />
+    <Compile Include="UserCoupon\UserCouponService.cs" />
+    <Compile Include="UserStoreMoneyCard\IUserStoreMoneyCardService.cs" />
+    <Compile Include="UserStoreMoneyCard\UserStoreMoneyCardService.cs" />
+    <Compile Include="Users\IUserQueryService.cs" />
+    <Compile Include="Users\IUserService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\AccountbookProxyService.cs" />
+    <Compile Include="Proxy\BaseProxyService.cs" />
+    <Compile Include="Proxy\IAccountbookProxyService.cs" />
+    <Compile Include="Shared\SharedService.cs" />
+    <Compile Include="Users\UserQueryService.cs" />
+    <Compile Include="Users\UserService.cs" />
+    <Compile Include="UserTimesCard\IUserTimesCardService.cs" />
+    <Compile Include="UserTimesCard\UserTimesCardService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Settings\systemSmsTemplate.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Script.I200.CommonLib\Script.I200.CommonLib.csproj">
+      <Project>{febb17ef-cf3e-4b6d-8a68-394123421144}</Project>
+      <Name>Script.I200.CommonLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Script.I200.Core\Script.I200.Core.csproj">
+      <Project>{36996652-2022-4345-9dff-5a074e1e3b8e}</Project>
+      <Name>Script.I200.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Script.I200.Data\Script.I200.Data.csproj">
+      <Project>{650f3f34-e1ad-407b-9506-cdfb03ebff35}</Project>
+      <Name>Script.I200.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Script.I200.Entity\Script.I200.Entity.csproj">
+      <Project>{f66790e0-eff6-4d5c-89ae-056e97861c07}</Project>
+      <Name>Script.I200.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
